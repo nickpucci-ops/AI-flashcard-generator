@@ -1,6 +1,7 @@
-from generator import generate_card
+from generator import generate_flashcard
 
-input = "This is test input string" 
-response = generate_card(input)
+print("Testing Llama output\n")
+test_input = "What is endothermic process?" 
+response = generate_flashcard(test_input)
 
-print(response)
+print("Response: \n" + response)

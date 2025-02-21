@@ -1,2 +1,6 @@
 #Llama model for ai flashcards
 Meta-Llama-3-8B-Instruct.Q4_0.gguf
+
+#__pycache__
+*.pyc
+*.pyo
