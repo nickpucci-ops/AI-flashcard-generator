@@ -17,3 +17,5 @@ b = tk.Button(
         text='Generate',
         command=create
 )
+b.pack()
+win.mainloop()
