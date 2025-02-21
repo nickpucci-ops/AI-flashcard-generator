@@ -11,7 +11,7 @@ def generate_flashcard(user_input):
     model = GPT4All(model_name, allow_download=False)
     tokens = []
     full_prompt = system_prompt + user_input
-    for token in model.generate(full_prompt, streaming=True):
+    for token in model.generate(full_prompt, max_tokens=50, streaming=True):
         tokens.append(token)
         sys.stdout.write(token)
     sys.stdout.flush()
