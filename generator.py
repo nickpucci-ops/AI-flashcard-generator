@@ -11,17 +11,19 @@ def generate_flashcard(user_input):
     model = GPT4All(model_name, allow_download=False)
     tokens = []
     full_prompt = system_prompt + user_input
-    for token in model.generate(full_prompt, max_tokens=50, streaming=True):
-        tokens.append(token)
-        sys.stdout.write(token)
-    sys.stdout.flush()
-    response = ' '.join(word.strip() for word in tokens if word.strip())
-    return response.strip(' ')
+    output = model.generate(full_prompt, max_tokens=50).strip()
+    #for token in model.generate(full_prompt, max_tokens=50):
+    #    tokens.append(token)
+    #    sys.stdout.write(token)
+    #sys.stdout.flush()
+    #response = ' '.join(word.strip() for word in tokens if word.strip())
+    #return response.strip(' ')
+    return output
   
 if __name__ == '__main__':
     #enter a prompt for user input 
     user_input = "What is a C pointer?"
-    response = generate_flashcard(user_input).strip()
+    response = generate_flashcard(user_input)
     flashcard = {
         "topic": user_input,
         "definition": response
