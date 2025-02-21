@@ -17,3 +17,9 @@ flashcards = {
     "definition: ": response
 }
 
+def generate_flashcard():
+
+    full_prompt = system_prompt + "\nUser input" + user_input
+    response = model.generate(full_prompt)
+    return response
+
