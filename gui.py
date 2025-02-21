@@ -7,7 +7,8 @@ def window():
     return win
 
 def create():
-    generate_flashcard()
+    response = generate_flashcard()
+    
 
 
 win.geometry("400x200")
