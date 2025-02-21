@@ -1,2 +1,2 @@
 # AI-flashcard-generator
-Python script to generate flashcards from user input. Using Meta's Llama 3 8B model
+Side project attempting to run a local LLM to generate flashcards. Uses Meta's Llama 3 8B model
