@@ -4,17 +4,15 @@ import sys
 model_name = "Meta-Llama-3-8B-Instruct.Q4_0.gguf"
 
 system_prompt = """
-You are a flashcard generator. The user will provide a topic or question, and you will generate a concise definition or explanation. Keep your response short and factual.
+You are a flashcard generator. The user will provide a topic or question, and you will generate a concise definition or explanation. Keep your response short and factual. You will never output anything except for the definition
 """
-user_input = "What is a C pointer?"
-
-flashcard = {
-    "topic": user_input,
-    "definition": response
-}
 
 def generate_flashcard(user_input):
     model = GPT4All(model_name, allow_download=False)
+    flashcard = {
+        "topic": user_input,
+        "definition": response
+    }
     tokens = []
     full_prompt = system_prompt + "\nUser input: " + user_input
     for token in model.generate(full_prompt, streaming=True):
