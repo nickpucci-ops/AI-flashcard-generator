@@ -23,7 +23,7 @@ if __name__ == '__main__':
         "definition": response
     }
 
-print("\n\nFlashcard ")
-print(f"Topic: {flashcard['topic']}")
-print(f"Definition: {flashcard['definition']}\n")
+#print("\n\nFlashcard ")
+#print(f"Topic: {flashcard['topic']}")
+#print(f"Definition: {flashcard['definition']}\n")
 
