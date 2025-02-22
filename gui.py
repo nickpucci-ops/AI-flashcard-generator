@@ -26,7 +26,10 @@ def create():
     if not user_input.strip():
         definition_text.config(text="Please enter a topic")
         return
-      
+    
+    definition_text.config(text="Generating...")
+    win.update_idletasks()
+
     response = generate_flashcard(user_input)
     flashcard_text = f"Topic: {user_input}\nDefinition: {response}"
     definition_text.config(text=flashcard_text)
